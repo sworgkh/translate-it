@@ -1,0 +1,9 @@
+{
+    "name": "Translate Click",
+    "description": "Context menus for selected text translation.",
+    "version": "0.1",
+    "manifest_version": 3,
+    "background": {
+      "service_worker": "background.js"
+    }
+}
