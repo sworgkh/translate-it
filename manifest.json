@@ -2,8 +2,27 @@
     "name": "Translate Click",
     "description": "Context menus for selected text translation.",
     "version": "0.1",
-    "manifest_version": 3,
+    "manifest_version": 2,
+    "permissions": ["<all_urls>", "activeTab"],
     "background": {
-      "service_worker": "background.js"
-    }
+        "scripts": ["background.js"],
+        "persistent": true
+    },
+
+    "commands": {
+        "Ctrl+M": {
+            "suggested_key": {
+                "default": "Ctrl+Q",
+                "mac": "Command+Q"
+            },
+            "description": "Toggle Translate"
+        }
+    },
+    "content_scripts": [{
+        "run_at": "document_start",
+        "matches": ["<all_urls>"],
+        "js": [
+            "contentscript.js"
+        ]
+    }]
 }
