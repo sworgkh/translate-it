@@ -10,12 +10,19 @@
     },
 
     "commands": {
-        "Ctrl+M": {
+        "YandexTranslate": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+Q",
+                "mac": "Alt+Shift+Q"
+            },
+            "description": "Yandex Translate"
+        },
+        "GoogleTranslate": {
             "suggested_key": {
                 "default": "Ctrl+Q",
-                "mac": "Command+Q"
+                "mac": "Alt+Q"
             },
-            "description": "Toggle Translate"
+            "description": "Google Translate"
         }
     },
     "content_scripts": [{
