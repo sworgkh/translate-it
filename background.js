@@ -7,6 +7,7 @@ chrome.commands.onCommand.addListener(function(command) {
     getSelection(function(selection) {
         let translateUrl = `${getBaseUrl(command)}${selection}`;
         chrome.tabs.create({ url: translateUrl });
+
     });
 });
 
